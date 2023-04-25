@@ -1,6 +1,9 @@
 #Page Replacement
 #FiFo
 def fifo(pages,page_size):
+    '''
+    simple logic u go in first u are the first one to get kicked out :)
+    '''
     page_holder = []
     print(page_holder)
     for x in pages:
@@ -19,6 +22,12 @@ def fifo(pages,page_size):
 
 from collections import deque
 def lru(pages,page_size):
+    '''
+    just keep track of the least used number to do so 
+    make sure you keep the not used number at left now to do so
+    if u get a number which is a hit then also just remove it and append it so it goes on right
+    so u automatically get the non used in the left so just remove it
+    '''
     page_holder = deque(maxlen=page_size)
     print(page_holder)
     for x in pages:
@@ -38,6 +47,11 @@ def lru(pages,page_size):
             print(page_holder)
 
 def opti(pages,page_size):
+    '''
+    when u get a miss and the holder is full then just check all the numbers in holder
+    if holder has a number which will never come again then remove it and add the new one
+    if not then see which has the furthest number and remove it :) complex but makes sense 
+    '''
     page_holder = deque(maxlen=page_size)
     for x in range(len(pages)):
         if pages[x] not in page_holder and len(page_holder)<page_size:
@@ -64,4 +78,6 @@ def opti(pages,page_size):
 
 
 #fifo([1,3,0,3,5,6,3],3)
-opti([7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2,3],4)
+#opti([7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2,3],4)
+#lru([7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2],4)
+

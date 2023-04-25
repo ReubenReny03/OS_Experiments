@@ -5,6 +5,7 @@ def safe_or_not(avalable,max,allocation):
     and the valuews array can have numbers depending on the number of elements in avalable
     these numbers are used to show the number in the output
     while need is not empty we set a tripper to trip if it is again and a
+    .... too big brain logic : (
 
     '''
     n = len(avalable)

@@ -50,12 +50,6 @@ def sstf(head,o_list):
         temp = temp_n
     print(sum)
 
-
-
-
-
-
-
-# fcfs(53,[98,183,37,122,14,124,65,67]) # code to run fcfs
-sstf(53,[98,183,37,122,14,124,65,67])
+#fcfs(53,[98,183,37,122,14,124,65,67]) # code to run fcfs
+#sstf(53,[98,183,37,122,14,124,65,67]) # code to run sstf
 
